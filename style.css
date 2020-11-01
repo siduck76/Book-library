@@ -1,7 +1,8 @@
 body  {
-	background-color: #e8ffff;
+	background-color: #f4f4f2 ;
 	font-family: 'Commissioner', sans-serif;
 	margin: 0px;
+	padding: 0px;
 }
 
 h1{
@@ -35,7 +36,7 @@ h2:hover {
     border: none;
     border-radius: 10px;
 	box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.19), 0px 6px 6px rgba(0, 0, 0, 0.23);
-	margin-top: 5%;
+ 	
 }
 
 .leftStatus {
@@ -79,7 +80,36 @@ h2:hover {
 .saveBtn {
 	border: none;
 	outline: none;
-	margin-top: 12%;
+	margin-top:  2%;
 	padding:  3%;
 	background-color: white;
+}
+
+.displayBook {
+	width: 90%;
+	height: auto;
+	margin: 7% 5% 15% 5% ;	
+	display: grid;
+    grid-template-columns:   25% 25% 25% 25%  ;
+  	 grid-column-gap: 0%;
+  	 grid-row-gap:  12%;
+
+}
+
+.bookContent {
+ 	border-radius: 10px;
+    margin:  0% ;
+	width: 85%;
+	height: 120%;
+	background-color:  #fdcfe8 ;
+	color:  black;
+	padding: 0%  3%  0%  3%  ;
+ 	 
+ 	text-align: center;
+ 		box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.19), 0px 3px 3px rgba(0, 0, 0, 0.23);
+
+}
+
+.bookContent:hover{
+	transform: scale(1.1);
 }
