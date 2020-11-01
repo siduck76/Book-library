@@ -1,0 +1,85 @@
+body  {
+	background-color: #e8ffff;
+	font-family: 'Commissioner', sans-serif;
+	margin: 0px;
+}
+
+h1{
+	text-align:	center;
+	padding : 1%;
+	 
+ 	background-color: #373a40;
+	color:  #EEEEEE;
+	margin-top: 0%;
+	 margin-bottom: 3% ;
+}
+h2 {
+	display: inline;
+	padding-right: 6%;
+
+	text-align: center;
+	color: #393939;
+}
+
+h2:hover {
+	text-decoration: underline;
+}
+
+.newBookButton {
+	padding: 1%;
+	font-size: 2vw;
+	background-color: #393939;
+	color: #EEEEEE;
+	float: right;
+    outline: none ;
+    border: none;
+    border-radius: 10px;
+	box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.19), 0px 6px 6px rgba(0, 0, 0, 0.23);
+	margin-top: 5%;
+}
+
+.leftStatus {
+	padding-left: 27%;
+}
+ .rightStatus {
+ 	padding-right: 27%;
+ }
+
+.newBook {
+	margin-right: 3% ;
+}
+
+.bookRec {
+	width: 50px;
+	height: 70px;
+	background-color: white;
+	border: 1px solid black;
+}
+
+#bookTitle , #bookAuthor , #bookPages {
+	background-color: white;
+	padding: 0.5%;
+	margin-left: 3%;
+	border: none;
+	outline: none;
+	margin-bottom: 5%;
+}
+
+.booksContainer {
+	display: none;
+	background-color: #b2deec;
+	color: #393939;
+	margin: 3% 37%   0% 37%;
+	padding: 2%;
+	text-align: center;
+	border: 2px solid black;
+	box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.19), 0px 6px 6px rgba(0, 0, 0, 0.23);
+}
+
+.saveBtn {
+	border: none;
+	outline: none;
+	margin-top: 12%;
+	padding:  3%;
+	background-color: white;
+}
