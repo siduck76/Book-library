@@ -20,6 +20,8 @@ removeSampleBook = () => {
     bookPages.value = "";
     bookAuthor.value = "";
     realStatus = "";
+
+    showAll();
 }
 
 addBookToLibrary = () => {
@@ -35,29 +37,136 @@ statusDropped = () => realStatus = "Dropped";
 statusComplet = () => realStatus = "Completed"
 
 
-function bubu() {
+function showAll() {
+
+    var parentBook = document.querySelector('.displayBook');
+    parentBook.innerHTML = "";
+
     for (let i = 0; i < myLibrary.length; i++) {
+        if (!(myLibrary[i].title == "")) {
+            var bookC = document.createElement('div');
 
-        var bookC = document.createElement('div');
+            var bookTit = document.createElement('p');
+            var bookAu = document.createElement('p');
+            var bookPa = document.createElement('p');
+            var bookSt = document.createElement('p');
+            var deleteBook = document.createElement('button');
 
-        var bookTit = document.createElement('p');
-        var bookAu = document.createElement('p');
-        var bookPa = document.createElement('p');
-        var bookSt = document.createElement('p');
+
+            deleteBook.innerText = "delete ";
+            deleteBook.classList.add('removeBookBtn');
+
+            bookTit.innerText = myLibrary[i].title;
+            bookAu.innerText = myLibrary[i].author;
+            bookPa.innerText = myLibrary[i].pages;
+            bookSt.innerText = myLibrary[i].status;
+
+            bookC.appendChild(bookTit);
+            bookC.appendChild(bookAu);
+            bookC.appendChild(bookPa);
+            bookC.appendChild(bookSt);
+            bookC.appendChild(deleteBook);
+            bookC.classList.add('bookContent');
 
 
-        bookTit.innerText = myLibrary[i].title;
-        bookAu.innerText = myLibrary[i].author;
-        bookPa.innerText = myLibrary[i].pages;
-        bookSt.innerText = myLibrary[i].status;
+            parentBook.appendChild(bookC);
+        }
+    }
+}
 
-        bookC.appendChild(bookTit);
-        bookC.appendChild(bookAu);
-        bookC.appendChild(bookPa);
-        bookC.appendChild(bookSt);
-        bookC.classList.add('bookContent');
+function showDropped() {
 
-        var parentBook = document.querySelector('.displayBook');
-        parentBook.appendChild(bookC);
+    var parentBook = document.querySelector('.displayBook');
+    parentBook.innerHTML = "";
+
+    for (let i = 0; i < myLibrary.length; i++) {
+        if (myLibrary[i].status == "Dropped") {
+            var bookC = document.createElement('div');
+
+            var bookTit = document.createElement('p');
+            var bookAu = document.createElement('p');
+            var bookPa = document.createElement('p');
+            var bookSt = document.createElement('p');
+
+
+            bookTit.innerText = myLibrary[i].title;
+            bookAu.innerText = myLibrary[i].author;
+            bookPa.innerText = myLibrary[i].pages;
+            bookSt.innerText = myLibrary[i].status;
+
+            bookC.appendChild(bookTit);
+            bookC.appendChild(bookAu);
+            bookC.appendChild(bookPa);
+            bookC.appendChild(bookSt);
+            bookC.classList.add('bookContent');
+
+
+            parentBook.appendChild(bookC);
+        }
+    }
+}
+
+
+function showCompleted() {
+
+    var parentBook = document.querySelector('.displayBook');
+    parentBook.innerHTML = "";
+
+    for (let i = 0; i < myLibrary.length; i++) {
+        if (myLibrary[i].status == "Completed") {
+            var bookC = document.createElement('div');
+
+            var bookTit = document.createElement('p');
+            var bookAu = document.createElement('p');
+            var bookPa = document.createElement('p');
+            var bookSt = document.createElement('p');
+
+
+            bookTit.innerText = myLibrary[i].title;
+            bookAu.innerText = myLibrary[i].author;
+            bookPa.innerText = myLibrary[i].pages;
+            bookSt.innerText = myLibrary[i].status;
+
+            bookC.appendChild(bookTit);
+            bookC.appendChild(bookAu);
+            bookC.appendChild(bookPa);
+            bookC.appendChild(bookSt);
+            bookC.classList.add('bookContent');
+
+
+            parentBook.appendChild(bookC);
+        }
+    }
+}
+
+function showReading() {
+
+    var parentBook = document.querySelector('.displayBook');
+    parentBook.innerHTML = "";
+
+    for (let i = 0; i < myLibrary.length; i++) {
+        if (myLibrary[i].status == "Reading") {
+            var bookC = document.createElement('div');
+
+            var bookTit = document.createElement('p');
+            var bookAu = document.createElement('p');
+            var bookPa = document.createElement('p');
+            var bookSt = document.createElement('p');
+
+
+            bookTit.innerText = myLibrary[i].title;
+            bookAu.innerText = myLibrary[i].author;
+            bookPa.innerText = myLibrary[i].pages;
+            bookSt.innerText = myLibrary[i].status;
+
+            bookC.appendChild(bookTit);
+            bookC.appendChild(bookAu);
+            bookC.appendChild(bookPa);
+            bookC.appendChild(bookSt);
+            bookC.classList.add('bookContent');
+
+
+            parentBook.appendChild(bookC);
+        }
     }
 }
