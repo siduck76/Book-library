@@ -43,7 +43,8 @@ function showAll() {
     parentBook.innerHTML = "";
 
     for (let i = 0; i < myLibrary.length; i++) {
-        if (!(myLibrary[i].title == "")) {
+        if (!(myLibrary[i].title == undefined)) {
+
             var bookC = document.createElement('div');
 
             var bookTit = document.createElement('p');
@@ -55,6 +56,16 @@ function showAll() {
 
             deleteBook.innerText = "delete ";
             deleteBook.classList.add('removeBookBtn');
+
+            deleteBook.addEventListener('click', function() {
+
+                if (i == 0) {
+                    myLibrary.splice(0, 1);
+                    showAll();
+                }
+                myLibrary.splice(i, i);
+                showAll();
+            });
 
             bookTit.innerText = myLibrary[i].title;
             bookAu.innerText = myLibrary[i].author;
@@ -70,6 +81,7 @@ function showAll() {
 
 
             parentBook.appendChild(bookC);
+
         }
     }
 }
@@ -87,7 +99,20 @@ function showDropped() {
             var bookAu = document.createElement('p');
             var bookPa = document.createElement('p');
             var bookSt = document.createElement('p');
+            var deleteBook = document.createElement('button');
 
+            deleteBook.classList.add('removeBookBtn');
+            deleteBook.innerText = "delete ";
+
+            deleteBook.addEventListener('click', function() {
+
+                if (i == 0) {
+                    myLibrary.splice(0, 1);
+                    showDropped();
+                }
+                myLibrary.splice(i, i);
+                showDropped();
+            });
 
             bookTit.innerText = myLibrary[i].title;
             bookAu.innerText = myLibrary[i].author;
@@ -98,6 +123,7 @@ function showDropped() {
             bookC.appendChild(bookAu);
             bookC.appendChild(bookPa);
             bookC.appendChild(bookSt);
+            bookC.appendChild(deleteBook);
             bookC.classList.add('bookContent');
 
 
@@ -120,7 +146,20 @@ function showCompleted() {
             var bookAu = document.createElement('p');
             var bookPa = document.createElement('p');
             var bookSt = document.createElement('p');
+            var deleteBook = document.createElement('button');
 
+            deleteBook.classList.add('removeBookBtn');
+            deleteBook.innerText = "delete ";
+
+            deleteBook.addEventListener('click', function() {
+
+                if (i == 0) {
+                    myLibrary.splice(0, 1);
+                    showCompleted();
+                }
+                myLibrary.splice(i, i);
+                showCompleted();
+            });
 
             bookTit.innerText = myLibrary[i].title;
             bookAu.innerText = myLibrary[i].author;
@@ -131,6 +170,7 @@ function showCompleted() {
             bookC.appendChild(bookAu);
             bookC.appendChild(bookPa);
             bookC.appendChild(bookSt);
+            bookC.appendChild(deleteBook);
             bookC.classList.add('bookContent');
 
 
@@ -152,7 +192,20 @@ function showReading() {
             var bookAu = document.createElement('p');
             var bookPa = document.createElement('p');
             var bookSt = document.createElement('p');
+            var deleteBook = document.createElement('button');
 
+            deleteBook.classList.add('removeBookBtn');
+            deleteBook.innerText = "delete ";
+
+            deleteBook.addEventListener('click', function() {
+
+                if (i == 0) {
+                    myLibrary.splice(0, 1);
+                    showReading();
+                }
+                myLibrary.splice(i, i);
+                showReading();
+            });
 
             bookTit.innerText = myLibrary[i].title;
             bookAu.innerText = myLibrary[i].author;
@@ -163,6 +216,7 @@ function showReading() {
             bookC.appendChild(bookAu);
             bookC.appendChild(bookPa);
             bookC.appendChild(bookSt);
+            bookC.appendChild(deleteBook);
             bookC.classList.add('bookContent');
 
 
