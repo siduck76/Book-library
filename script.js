@@ -1,6 +1,11 @@
 let myLibrary = [];
 let realStatus; // book status
 
+var myColors = ['#a6dcef', '#f0e2ec', '#fff475', '#cbf0f8', '#fdcfe8', '#ccff90'];
+
+
+
+
 function sampleBook(title, author, pages, status) {
     this.title = title,
         this.author = author,
@@ -10,6 +15,7 @@ function sampleBook(title, author, pages, status) {
 
 openSampleBook = () => {
     document.querySelector('.booksContainer').style.cssText = 'display:flex';
+    uncheckBtns();
 }
 
 removeSampleBook = () => {
@@ -30,7 +36,7 @@ addBookToLibrary = () => {
 
 }
 
-var myColors = ['#a6dcef', '#f0e2ec', '#fff475', '#cbf0f8', '#fdcfe8', '#ccff90'];
+
 
 statusReading = () => realStatus = "Reading";
 statusDropped = () => realStatus = "Dropped";
@@ -42,8 +48,11 @@ function showAll() {
     var parentBook = document.querySelector('.displayBook');
     parentBook.innerHTML = "";
 
+
+
     for (let i = 0; i < myLibrary.length; i++) {
         if (!(myLibrary[i].title == undefined)) {
+
 
             var bookC = document.createElement('div');
 
@@ -58,12 +67,12 @@ function showAll() {
             deleteBook.classList.add('removeBookBtn');
 
             deleteBook.addEventListener('click', function() {
-
-                if (i == 0) {
-                    myLibrary.splice(0, 1);
-                    showAll();
-                }
-                myLibrary.splice(i, i);
+                /*
+                                if (i == 0) {
+                                    myLibrary.splice(i, 1);
+                                    showAll();
+                                } */
+                myLibrary.splice(i, 1);
                 showAll();
             });
 
@@ -224,3 +233,23 @@ function showReading() {
         }
     }
 }
+
+function uncheckBtns() {
+    var statusBtns = document.querySelectorAll('#statusBtns');
+
+    statusBtns.forEach((statusBtns) => {
+        statusBtns.checked = false;
+    })
+};
+
+
+function changeCol() {
+
+    return myColors[Math.floor((Math.random()) * myColors.length)];
+}
+
+var uwu = document.querySelectorAll('.bookContent');
+
+uwu.forEach((uwu) => {
+    uwu.style.cssText = 'background-color:pink;';
+})

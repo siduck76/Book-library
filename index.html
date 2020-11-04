@@ -4,7 +4,8 @@
 		<title>book library</title>
 		<link rel="stylesheet" type="text/css" href="style.css">
 		<link href="https://fonts.googleapis.com/css2?family=Commissioner&display=swap" rel="stylesheet">
-		 
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 	</head>
 	<h1 onclick="location.reload();"> Book  Library </h1>
 	<div class="statusHeadings">
@@ -21,6 +22,7 @@
 				<label for="bookAuthor"> Author <input id="bookAuthor"type="text"></label><br>
 				<label for="bookPages"> Pages  &nbsp; &nbsp;<input id="bookPages"type="text"></label><br>
 				<h4> Book status</h4>
+				
 				<input type="radio" id="statusBtns" name="bookStatus" onclick="statusComplet();">
 				<label for="Completed"> Completed</label>
 				<input type="radio" id="statusBtns" name="bookStatus" onclick="statusReading()">
