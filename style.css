@@ -95,8 +95,7 @@ h2:hover {
 	margin: 7% 5% 15% 5% ;	
 	display: grid;
     grid-template-columns:   25% 25% 25% 25%  ;
-  
-  	 grid-row-gap:  20%;
+    grid-row-gap:  20%;
 
 }
 
@@ -110,13 +109,7 @@ h2:hover {
 	padding: 0%  3%  0%  3%  ;
  	text-align: center;
    	box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.19), 0px 3px 3px rgba(0, 0, 0, 0.23);
-
 }
-
-.bookContent:hover{
-	/*transform: scale(1.1); */
-}
-
 
 .removeBookBtn {
 	border: none;
@@ -136,10 +129,8 @@ h2:hover {
 
 .bookContent:hover{
 	border: 2px solid black;
-
 	box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.19), 0px 3px 3px rgba(0, 0, 0, 0.23);
 }
-
 
 @media (max-width: 1024px){
 	body{
@@ -160,21 +151,17 @@ h2:hover {
 	color: #393939;
 	margin: 3% 16%   0% 16%;
 	padding: 10%;
-	text-align: center;
-	 
+	text-align: center;	 
 }
 
 .saveBtn {
-	 
 	margin-top:  15%;
-	padding:  5%;
+    padding:  5%;
  
 }
 .removeBookBtn {
 	font-size: 1.5vw;
-
 }
-
 }
 
 @media (max-width: 726px){
@@ -184,9 +171,7 @@ h2:hover {
 	margin: 7% 7% 15% 7% ;	
 	display: grid;
     grid-template-columns:    50% 50%  ;
-  
-  	 grid-row-gap:  23%;
-
+    grid-row-gap:  23%;
 }
 
 body {
@@ -195,8 +180,6 @@ body {
  }
 }
 
- 
- 
 @media (min-width: 1500px) {
 h1 {
     font-size: 3vw;
@@ -204,7 +187,6 @@ h1 {
   h2 {
   	font-size: 1.7vw;
   }
-
   body {
   	font-size: 1.1vw;
   }

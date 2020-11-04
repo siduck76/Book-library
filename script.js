@@ -1,6 +1,8 @@
 let myLibrary = [];
 let realStatus; // book status
+
 let randomBookCol;
+
 var myColors = ['#a6dcef', '#f0e2ec', '#fff475', '#cbf0f8', '#fdcfe8', '#ccff90',
     '#ffa36c', '#ffd5cd', '#bbbfca', , '#e1ccec', '#fcf876', '#d2f5e3', '#fafcc2', '#ffc7c7', '#99f3bd', '#fbfd8a', '#ffbcbc', '#a6b1e1', '#fe8761', '#ffb99a', '#c0ffb3', '#f1ffab'
 ];
@@ -14,11 +16,7 @@ function sampleBook(title, author, pages, status) {
 
 openSampleBook = () => {
     document.querySelector('.booksContainer').style.cssText = 'display:flex';
-
-
     uncheckBtns();
-
-
 }
 
 removeSampleBook = () => {
@@ -30,8 +28,6 @@ removeSampleBook = () => {
     bookAuthor.value = "";
     realStatus = "";
 
-
-
     showAll();
 }
 
@@ -41,19 +37,14 @@ addBookToLibrary = () => {
 
 }
 
-
-
 statusReading = () => realStatus = "Reading";
 statusDropped = () => realStatus = "Dropped";
 statusComplet = () => realStatus = "Completed"
-
 
 function showAll() {
 
     var parentBook = document.querySelector('.displayBook');
     parentBook.innerHTML = "";
-
-
 
     for (let i = 0; i < myLibrary.length; i++) {
         if (!(myLibrary[i].title == undefined)) {
@@ -154,12 +145,10 @@ function showDropped() {
     }
 }
 
-
 function showCompleted() {
 
     var parentBook = document.querySelector('.displayBook');
     parentBook.innerHTML = "";
-
 
     for (let i = 0; i < myLibrary.length; i++) {
         if (myLibrary[i].status == "Completed") {
@@ -262,8 +251,4 @@ function uncheckBtns() {
     })
 };
 
-
-function changeCol() {
-
-    randomBookCol = myColors[Math.floor((Math.random()) * myColors.length)];
-}
+changeCol = () => randomBookCol = myColors[Math.floor((Math.random()) * myColors.length)];
