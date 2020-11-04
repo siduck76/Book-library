@@ -1,10 +1,9 @@
 let myLibrary = [];
 let realStatus; // book status
-
-var myColors = ['#a6dcef', '#f0e2ec', '#fff475', '#cbf0f8', '#fdcfe8', '#ccff90'];
-
-
-
+let randomBookCol;
+var myColors = ['#a6dcef', '#f0e2ec', '#fff475', '#cbf0f8', '#fdcfe8', '#ccff90',
+    '#ffa36c', '#ffd5cd', '#bbbfca', '#fcf876', '#', '#', '#', '#', '#', '#', '#', '#'
+];
 
 function sampleBook(title, author, pages, status) {
     this.title = title,
@@ -15,7 +14,11 @@ function sampleBook(title, author, pages, status) {
 
 openSampleBook = () => {
     document.querySelector('.booksContainer').style.cssText = 'display:flex';
+
+
     uncheckBtns();
+
+
 }
 
 removeSampleBook = () => {
@@ -26,6 +29,8 @@ removeSampleBook = () => {
     bookPages.value = "";
     bookAuthor.value = "";
     realStatus = "";
+
+
 
     showAll();
 }
@@ -88,6 +93,10 @@ function showAll() {
             bookC.appendChild(deleteBook);
             bookC.classList.add('bookContent');
 
+            changeCol();
+
+            bookC.style.backgroundColor = randomBookCol;
+
 
             parentBook.appendChild(bookC);
 
@@ -135,6 +144,10 @@ function showDropped() {
             bookC.appendChild(deleteBook);
             bookC.classList.add('bookContent');
 
+            changeCol();
+
+            bookC.style.backgroundColor = randomBookCol;
+
 
             parentBook.appendChild(bookC);
         }
@@ -146,6 +159,7 @@ function showCompleted() {
 
     var parentBook = document.querySelector('.displayBook');
     parentBook.innerHTML = "";
+
 
     for (let i = 0; i < myLibrary.length; i++) {
         if (myLibrary[i].status == "Completed") {
@@ -182,6 +196,9 @@ function showCompleted() {
             bookC.appendChild(deleteBook);
             bookC.classList.add('bookContent');
 
+            changeCol();
+
+            bookC.style.backgroundColor = randomBookCol;
 
             parentBook.appendChild(bookC);
         }
@@ -228,6 +245,9 @@ function showReading() {
             bookC.appendChild(deleteBook);
             bookC.classList.add('bookContent');
 
+            changeCol();
+
+            bookC.style.backgroundColor = randomBookCol;
 
             parentBook.appendChild(bookC);
         }
@@ -245,11 +265,5 @@ function uncheckBtns() {
 
 function changeCol() {
 
-    return myColors[Math.floor((Math.random()) * myColors.length)];
+    randomBookCol = myColors[Math.floor((Math.random()) * myColors.length)];
 }
-
-var uwu = document.querySelectorAll('.bookContent');
-
-uwu.forEach((uwu) => {
-    uwu.style.cssText = 'background-color:pink;';
-})

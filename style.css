@@ -40,6 +40,7 @@ h2:hover {
 }
 .newBookButton:hover {
 	transform: scale(1.1);
+
 }
 
 .leftStatus {
@@ -209,4 +210,6 @@ h1 {
   }
 }
 
- 
+h1:hover {
+	color: #a6f6f1;
+}
