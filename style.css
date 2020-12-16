@@ -134,6 +134,9 @@ h2:hover {
 }
 
 @media (max-width: 1024px){
+	h1 {
+    font-size: 5vw;
+  }
 	body{
 		font-size:  2vw;
 	}
@@ -203,7 +206,7 @@ body {
 
 @media (min-width: 1500px) {
 h1 {
-    font-size: 3vw;
+    font-size: 5vw;
   }
   h2 {
   	font-size: 1.7vw;
