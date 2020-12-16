@@ -163,7 +163,27 @@ h2:hover {
 .removeBookBtn {
 	font-size: 1.5vw;
 }
+
+/*   left responsive navbar */ 
+
+.leftStatus {
+	padding-left: 0%;
 }
+ .rightStatus {
+ 	padding-right: 0%;
+ }
+
+ h2 {
+ 	display: block;
+ 	text-align: left;
+ }
+
+ .statusHeadings {
+ 	padding-left: 15%;
+ }
+
+}
+
 
 @media (max-width: 726px){
 	.displayBook {
