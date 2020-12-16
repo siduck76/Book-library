@@ -141,12 +141,15 @@ h2:hover {
 		font-size:  2vw;
 	}
  
-.leftStatus {
-	padding-left: 15%;
-}
-
- .rightStatus {
- 	padding-right:  15%;
+ .statusHeadings {
+ 	background-color: pink;
+ 	margin-right: 70%;
+ 	margin-top: 0%;
+ 	padding: 3% 0% 2% 4%;
+ }
+ 
+ h1 {
+ 	margin-bottom: 0%;
  }
 
  .booksContainer {
@@ -181,9 +184,7 @@ h2:hover {
  	text-align: left;
  }
 
- .statusHeadings {
- 	padding-left: 15%;
- }
+ 
 
 }
 
