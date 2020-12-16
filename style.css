@@ -3,6 +3,7 @@ body  {
 	font-family: 'Commissioner', sans-serif;
 	margin: 0px;
 	padding: 0px;
+        overflow-y:scroll;
 }
 
 h1{
