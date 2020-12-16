@@ -171,7 +171,7 @@ h2:hover {
 	height: auto;
 	margin: 7% 7% 15% 7% ;	
 	display: grid;
-    grid-template-columns:    50% 50%  ;
+    grid-template-columns:    100%  ;
     grid-row-gap:  23%;
 }
 
