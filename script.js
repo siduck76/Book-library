@@ -7,12 +7,15 @@ var myColors = ['#a6dcef', '#f0e2ec', '#fff475', '#cbf0f8', '#fdcfe8', '#ccff90'
     '#ffa36c', '#ffd5cd', '#bbbfca', , '#e1ccec', '#fcf876', '#d2f5e3', '#fafcc2', '#ffc7c7', '#99f3bd', '#fbfd8a', '#ffbcbc', '#a6b1e1', '#fe8761', '#ffb99a', '#c0ffb3', '#f1ffab'
 ];
 
-function sampleBook(title, author, pages, status) {
+class sampleBook {
+    constructor (title, author, pages, status)  {
     this.title = title,
         this.author = author,
         this.pages = pages,
         this.status = status
 }
+
+};
 
 openSampleBook = () => {
     document.querySelector('.booksContainer').style.cssText = 'display:flex';
@@ -32,9 +35,8 @@ removeSampleBook = () => {
 }
 
 addBookToLibrary = () => {
-    var myBookObject = new sampleBook(bookTitle.value, bookAuthor.value, bookPages.value, realStatus);
+    let myBookObject = new sampleBook(bookTitle.value, bookAuthor.value, bookPages.value, realStatus);
     myLibrary.push(myBookObject);
-
 }
 
 statusReading = () => realStatus = "Reading";
