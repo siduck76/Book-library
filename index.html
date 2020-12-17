@@ -1,48 +1,43 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<title>book library</title>
-		<link rel="stylesheet" type="text/css" href="style.css">
-		<link href="https://fonts.googleapis.com/css2?family=Commissioner&display=swap" rel="stylesheet">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-            
-	</head>
+<head>
+	<title>book library</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link href="https://fonts.googleapis.com/css2?family=Commissioner&display=swap" rel="stylesheet">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
 
-	<body>
-
-		<h1 onclick="location.reload();"> Book  Library </h1> <!-- reload site --> 
-		<div class="statusHeadings">  
-			<h2 class="leftStatus" onclick="showAll();">All </h2> <h2 onclick="showCompleted();">Completed</h2> <h2 onclick="showReading();">Reading</h2> 	<h2 class="rightStatus" onclick="showDropped();"> Dropped </h2>
+<body>
+	<h1 onclick="location.reload();"> Book Library </h1> <!-- reload site -->
+	<div class="statusHeadings">
+		<h2 class="leftStatus" onclick="showAll();">All </h2>
+		<h2 onclick="showCompleted();">Completed</h2>
+		<h2 onclick="showReading();">Reading</h2>
+		<h2 class="rightStatus" onclick="showDropped();"> Dropped </h2>
+	</div>
+	<div class="newBook">
+		<button class="newBookButton" onclick="openSampleBook();"> + </button>
+	</div>
+	<div class="booksContainer">
+		<div class="sampleForm">
+			<form class="bookForm">
+				<label for="bookTitle"> Title &nbsp; &nbsp; &nbsp; &nbsp;<input id="bookTitle" type="text"></label><br>
+				<label for="bookAuthor"> Author <input id="bookAuthor" type="text"></label><br>
+				<label for="bookPages"> Pages &nbsp; &nbsp;<input id="bookPages" type="text"></label><br>
+				<h4> Book status</h4>
+				<input type="radio" id="statusBtns" name="bookStatus" onclick="statusComplet();">
+				<label for="Completed"> Completed</label>
+				<input type="radio" id="statusBtns" name="bookStatus" onclick="statusReading()">
+				<label for="Reading"> Reading</label>
+				<input type="radio" id="statusBtns" name="bookStatus" onclick="statusDropped()">
+				<label for="Dropped"> Dropped</label>
+				<button type="button" class="saveBtn" onclick="removeSampleBook();">save</button>
+			</form>
 		</div>
+	</div>
+	<div class="displayBook"> </div>
+	<script src="script.js"> </script>
+</body>
 
-      
-
-		<div class="newBook"> 
-			<button class="newBookButton" onclick="openSampleBook();"> + </button>
-		</div>
-		
-		<div class="booksContainer">
-			<div  class="sampleForm">
-				<form class="bookForm">
-					<label for="bookTitle">  Title  &nbsp; &nbsp; &nbsp; &nbsp;<input id="bookTitle" type="text"></label><br>
-					<label for="bookAuthor"> Author <input id="bookAuthor"type="text"></label><br>
-					<label for="bookPages"> Pages  &nbsp; &nbsp;<input id="bookPages"type="text"></label><br>
-					<h4> Book status</h4>
-					
-					<input type="radio" id="statusBtns" name="bookStatus" onclick="statusComplet();">
-					<label for="Completed"> Completed</label>
-					<input type="radio" id="statusBtns" name="bookStatus" onclick="statusReading()">
-					<label for="Reading"> Reading</label>
-					<input type="radio" id="statusBtns" name="bookStatus" onclick="statusDropped()">
-					<label for="Dropped"> Dropped</label>
-					
-					<button type="button" class="saveBtn" onclick="removeSampleBook();">save</button>
-				</form>
-			</div>
-		</div>
-		<div class="displayBook"> </div>
-			
-			<script src="script.js"> </script>
-		</body>
-	</html>
+</html>
