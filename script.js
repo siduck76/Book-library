@@ -254,3 +254,5 @@ function uncheckBtns() {
 };
 
 changeCol = () => randomBookCol = myColors[Math.floor((Math.random()) * myColors.length)];
+
+
